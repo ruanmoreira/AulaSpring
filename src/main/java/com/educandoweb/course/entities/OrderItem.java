@@ -39,7 +39,7 @@ public class OrderItem implements Serializable {
 	public void setOrder (Order order) {
 		id.setOrder(order);
 	}
-	
+	@JsonIgnore //metodo get causa o "mao dupla"/looping 
 	public Product getProduct() {
 		return id.getProduct();
 	}
